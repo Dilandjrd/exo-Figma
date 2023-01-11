@@ -1,0 +1,24 @@
+
+.footer {
+    background-color: #d9d9d9;
+    padding: 20px;
+    padding-left: 30px;
+    margin-top: 100px;
+    
+    &__list {
+        display: flex; 
+        gap: 5px;
+        list-style: none;
+    }
+    &__list a {
+        font-weight: bold;
+        text-decoration: none;
+        color: #679ED4;
+        font-size: 10px;
+        
+    }
+    &__text {
+        color: gray;
+        font-size: 10px;
+    }
+}
