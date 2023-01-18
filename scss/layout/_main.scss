@@ -36,6 +36,12 @@
     justify-content: center;
     align-items: center;
 
+    &__form__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     &__title {
         margin-bottom: 50px;
         font-size: 22px;
@@ -50,6 +56,7 @@
     }
 
     &__form__input {
+
         margin: 7px;
         padding: 6px;
         border: none;
@@ -65,24 +72,59 @@
         height: 150px;
     }
 
-    .btn__container{
-        display: flex;
-        flex-direction: row;
-        justify-content: left;
-
-    }
-
     &__form__btn {
         background-color: #679ED4;
         color: white;
         border: none;
         border-radius: 5px;
         padding: 4px;
-        display: flex;
-        justify-content: left;
-        flex-direction: row;
-        align-items: flex-start;
-       
+        display: block;
+        align-self: baseline;
+        margin-top: 16px;
+    }
+}
+
+@media screen and (min-width: 481px) {
+    .article {
+        &__container {
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            flex-wrap: wrap-reverse;
+            justify-content: center;
+            gap: 30px;
+        }
     }
 
+    .section {
+        &__form__container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        &__form__input {
+            padding: 11px;
+        }
+        &__form__textarea {
+            width: 470px;
+        }
+        &__form__btn {
+            padding: 10px;
+        }
+    }
 }
+
+@media screen and (min-width: 769px) {
+    .article {
+        &__container {
+            gap: 60px;
+        }
+
+        &__paragraphe {
+            margin-top: 20px;
+
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {}

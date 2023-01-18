@@ -31,3 +31,27 @@
     }
     
 }
+@media screen and (min-width: 481px){
+    .header { 
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+    }
+}
+@media screen and (min-width: 769px){
+    .header { 
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 350px;
+        }
+
+}
+@media screen and (min-width: 1280px){
+    .header { 
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+        }
+    
+
+}
