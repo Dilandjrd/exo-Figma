@@ -72,7 +72,7 @@ contactForm.addEventListener('submit', (event) => {
         console.log(formData)
         axios.post('http://212.83.176.255:3030/contact', formData)
             .then(response => {
-                console.log(response);
+                console.log(response.data);
             })
             .catch(error => {
                 console.log(error);
