@@ -34,11 +34,11 @@ contactForm.addEventListener('submit', (event) => {
     const phoneError = document.getElementById('phoneError');
     const messageError = document.getElementById('messageError');
 
-    firstNameError.style.opacity = '0';
-    lastNameError.style.opacity = '0';
-    emailError.style.opacity = '0';
-    phoneError.style.opacity = '0';
-    messageError.style.opacity = '0';
+    firstNameError.style.display = 'none';
+    lastNameError.style.display = 'none';
+    emailError.style.display = 'none';
+    phoneError.style.display = 'none';
+    messageError.style.display = 'none';
 
     if (!formData.firstName || !formData.lastName || !formData.email || !formData.phone || !formData.message) {
         const emailRegex = /[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}/igm;
@@ -70,6 +70,14 @@ contactForm.addEventListener('submit', (event) => {
 
     if (!Object.values(errors).includes(true)) {
         console.log(formData)
+        axios.post('http://212.83.176.255:3030/contact', formData)
+            .then(response => {
+                console.log(response);
+            })
+            .catch(error => {
+                console.log(error);
+            });
+
     }
 
 
